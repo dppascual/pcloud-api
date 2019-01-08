@@ -1,0 +1,15 @@
+FROM golang:1.11.2-alpine3.8
+
+# Add git
+RUN apk update && \
+    apk upgrade && \
+    apk add git bash build-base procps
+
+# Create a workspace
+RUN mkdir /api
+WORKDIR /api
+
+# Attach a volume
+VOLUME ["/api"]
+
+ENTRYPOINT ["/bin/bash"]
