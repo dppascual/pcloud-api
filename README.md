@@ -7,11 +7,11 @@
 
 # Introduction
 
-The Pantahub API is an HTTP API served by PCloud. It is the API the PCloud client uses to communicate with the Cloud, so everything the PCloud client can do can be done with the API.
+The PCloud API is an HTTP API served by PCloud. It is the API the PCloud client uses to communicate with the Cloud, so everything the PCloud client can do can be done with the API.
 
 The API specification can be found in the link below.
 
-> URL: [PCloud API specification](https://app.swaggerhub.com/apis-docs/dppascual/pantahub-api/1.0.0)
+> URL: [PCloud API specification](https://app.swaggerhub.com/apis-docs/dppascual/pcloud-api/1.0.0)
 
 # Getting started
 
@@ -66,7 +66,7 @@ crypto/tls
 net/http/httptrace
 net/http
 github.com/gorilla/mux
-github.com/dppascual/pantahub-api
+github.com/dppascual/pcloud-api
 
 bash-4.4# go test -v
 === RUN   TestGetDeviceStats
