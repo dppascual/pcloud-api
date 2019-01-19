@@ -1,4 +1,4 @@
-# PANTAHUB API
+# PCLOUD API
 
 - [Introduction](#introduction)
 - [Getting started](#getting-started)
@@ -7,11 +7,11 @@
 
 # Introduction
 
-The Pantahub API is an HTTP API served by Pantahub Cloud. It is the API the Pantahub client uses to communicate with the Cloud, so everything the Pantahub client can do can be done with the API.
+The Pantahub API is an HTTP API served by PCloud. It is the API the PCloud client uses to communicate with the Cloud, so everything the PCloud client can do can be done with the API.
 
 The API specification can be found in the link below.
 
-> URL: [Pantahub API specification](https://app.swaggerhub.com/apis-docs/dppascual/pantahub-api/1.0.0)
+> URL: [PCloud API specification](https://app.swaggerhub.com/apis-docs/dppascual/pantahub-api/1.0.0)
 
 # Getting started
 
@@ -38,8 +38,8 @@ docker run --name testing --rm -it -v ${PWD}:/api <username>/golang-test
 Create dependencies and test the code:
 
 ```
-bash-4.4# go mod init "github.com/dppascual/pantahub-api"
-go: creating new go.mod: module github.com/dppascual/pantahub-api
+bash-4.4# go mod init "github.com/dppascual/pcloud-api"
+go: creating new go.mod: module github.com/dppascual/pcloud-api
 
 bash-4.4# go build -v .
 go: finding github.com/gorilla/mux v1.6.2
@@ -74,7 +74,7 @@ bash-4.4# go test -v
 === RUN   TestGetDeviceStatsNonExistent
 --- PASS: TestGetDeviceStatsNonExistent (0.00s)
 PASS
-ok  	github.com/dppascual/pantahub-api	0.006s
+ok  	github.com/dppascual/pcloud-api	0.006s
 ```
 
 ## Production
@@ -82,16 +82,16 @@ ok  	github.com/dppascual/pantahub-api	0.006s
 Build an image from the `Dockerfile`:
 
 ```
-docker build -t <username>/pantahub-api .
+docker build -t <username>/pcloud-api .
 ```
 
-Deploy the Pantahub API:
+Deploy the PCloud API:
 
 ```
-docker run --name pantahub-api -p 80:80 --rm -d <username>/pantahub-api
+docker run --name pcloud-api -p 80:80 --rm -d <username>/pcloud-api
 ```
 
-Automate the deployment (Docker installation and API Pantahub deployment) with the Ansible usage:
+Automate the deployment (Docker installation and API PCloud deployment) with the Ansible usage:
 
 ```
 ansible-playbook --private-key="~/.ssh/id_rsa" -i 10.60.128.33, api_deployment.yml                                                                                                             (ansible)
